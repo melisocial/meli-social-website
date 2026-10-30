@@ -119,6 +119,9 @@ p{max-width:var(--measure);}
   transition:background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 .btn-primary{background:var(--fig); color:var(--on-fig);}
+/* Wide letter spacing adds space after the last letter; shift the words back to true centre */
+.btn{text-indent:.24em;}
+@media (max-width:860px){ .btn-nav{text-indent:.18em;} } /* matches its tighter phone spacing */
 .btn-primary:hover{background:var(--fig-deep);}
 .tone-dark .btn-primary{background:var(--ivory); color:var(--fig);}
 .tone-dark .btn-primary:hover{background:var(--bone);}
@@ -139,7 +142,8 @@ p{max-width:var(--measure);}
 .logo{display:inline-flex; flex-direction:column; align-items:center; color:var(--noir); text-decoration:none;}
 .logo-word{font-family:var(--font-display); font-weight:500; font-variation-settings:"opsz" 40; letter-spacing:.14em; margin-right:-.14em; line-height:1;}
 .logo-sub{display:flex; align-items:center; gap:.9em; margin-top:.8em; font-family:var(--font-sans); font-weight:500; font-size:.24em; letter-spacing:.42em; margin-right:-.42em;}
-.logo-sub::before, .logo-sub::after{content:""; width:1.8em; height:1px; background:currentColor;}
+.logo-sub::before, .logo-sub::after{content:""; width:1.86em; height:1px; background:currentColor;}
+.logo-sub{transform:translateX(-.17em);} /* optical: centres SOCIAL under MELI */
 .tone-dark .logo, footer .logo{color:var(--ivory);}
 
 /* ---------- Navigation ---------- */
@@ -369,6 +373,7 @@ body.no-hero-photo .hero-photo{display:none;}
 .faq-list summary{list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:var(--s3); padding:24px 0; font-family:var(--font-display); font-size:20px; line-height:1.3; font-optical-sizing:none; font-variation-settings:"opsz" 11;}
 .faq-list summary::-webkit-details-marker{display:none;}
 .faq-list summary::after{content:"+"; font-family:var(--font-sans); font-size:22px; color:var(--fig); transition:transform .3s var(--ease); flex-shrink:0;}
+.faq-list summary::after{position:relative; top:-2px;} /* optical: centres + on the question */
 .faq-list details[open] summary::after{transform:rotate(45deg);}
 .faq-list details p{padding:0 0 24px; color:var(--noir); max-width:600px;}
 @media (max-width:860px){ .faq-grid{grid-template-columns:1fr; gap:var(--s3);} .faq-list summary{font-size:18px;} }
