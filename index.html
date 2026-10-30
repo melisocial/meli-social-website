@@ -179,12 +179,12 @@ nav ul{display:flex; gap:40px; align-items:center;}
 .product-card{background:var(--bone); padding:var(--s4) 48px; display:flex; flex-direction:column;}
 .product-card .eyebrow + h3{margin-top:var(--s2);}
 .product-card > p{margin-top:var(--s3);}
-.product-features{margin-top:var(--s3); border-top:1px solid var(--hairline);}
-.product-features li{padding:var(--s2) 0; border-bottom:1px solid var(--hairline);}
-.product-addon{margin-top:var(--s3);}
-.product-addon .small{display:block;}
-.price-note{margin-top:auto; padding-top:var(--s3);}
-.price-note span{display:block; font-family:var(--font-display); font-size:16px; line-height:1.6;}
+.product-included{margin-top:var(--s3); font-size:12px; line-height:16px;}
+.product-features{margin-top:var(--s1);}
+.product-features li{position:relative; padding:6px 0 6px 18px; font-size:14px; line-height:1.45; color:var(--mauve);}
+.product-features li::before{content:""; position:absolute; left:0; top:13px; width:5px; height:5px; border-radius:50%; background:var(--fig);}
+.product-card .price-note{margin-top:auto; padding-top:var(--s3);}
+.price-note span{display:block; padding-top:var(--s2); border-top:1px solid var(--hairline); font-family:var(--font-sans); font-weight:500; font-size:13px; line-height:1.5; letter-spacing:.06em;}
 @media (max-width:860px){ .product-grid{grid-template-columns:1fr;} .product-card{padding:48px var(--s3);} }
 @media (max-width:400px){ .product-card{padding:var(--s3) 24px;} }
 
@@ -510,37 +510,34 @@ body.no-hero-photo .hero-photo{display:none;}
     <div class="section-head rv-group">
       <p class="eyebrow ruled rv">Services</p>
       <h2 class="rv">Two ways to work <em>together</em></h2>
-      <p class="text rv">Every package is tailored to your goals.</p>
+      <p class="text rv">Every package is tailored to your business and goals.</p>
     </div>
     <div class="product-grid rv-group">
       <div class="product-card rv">
         <span class="eyebrow">Ongoing</span>
-        <h3>Full Service Social Media Management</h3>
-        <p>Your whole social presence, handled. I plan it, create it, post it and look after your community every month, so you can put your time into growing your business.</p>
+        <h3>Social Media Management</h3>
+        <p>Your social media, handled every month, so people get to know you, trust you and choose you.</p>
+        <span class="eyebrow product-included">What's included</span>
         <ul class="product-features">
-          <li>A full audit of what's working and what isn't</li>
-          <li>A strategy built around what you offer and who you offer it to</li>
-          <li>Posts, reels and carousels designed and created for you</li>
+          <li>An audit and strategy built around your offer and audience</li>
+          <li>Posts, reels and carousels created for you</li>
           <li>Comments and messages answered, so your community feels heard</li>
-          <li>Monthly reports in plain language</li>
+          <li>Monthly reports on what's working</li>
         </ul>
-        <div class="product-addon">
-          <span class="small">Add-on for Full Service clients</span>
-          <span>Paid Ad Management</span>
-        </div>
-        <p class="price-note"><span>Full Service begins at $1,000 per month.</span></p>
+        <p class="price-note"><span>From $1,000 per month</span></p>
       </div>
       <div class="product-card rv">
-        <span class="eyebrow">Project</span>
-        <h3>Video Series Package</h3>
-        <p>A one time project for brands that want a library of short videos without ongoing management. I plan every video with you, then edit them into a series that's ready to post.</p>
+        <span class="eyebrow">One time project</span>
+        <h3>Video Series</h3>
+        <p>From a single video to a full series, ready to post, without ongoing management.</p>
+        <span class="eyebrow product-included">What's included</span>
         <ul class="product-features">
-          <li>A planning session to map out every video</li>
-          <li>A series of short-form videos, planned and edited</li>
-          <li>Captions and a posting plan for every video</li>
-          <li>Yours to use on any platform, for as long as you like</li>
+          <li>A planning session to map out your video campaign</li>
+          <li>Filmed in person and edited by me</li>
+          <li>Captions and a posting plan for each video</li>
+          <li>Yours to use anywhere, for as long as you like</li>
         </ul>
-        <p class="price-note"><span>Project pricing on request.</span></p>
+        <p class="price-note"><span>Priced per project</span></p>
       </div>
     </div>
   </div>
