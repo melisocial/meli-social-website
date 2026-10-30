@@ -4,7 +4,7 @@
    ========================================================================== */
 window.MELI_INTAKE = {
   // Booking page (Calendly) for the "Book a free call" button on the /intake page
-  bookingUrl: "https://calendly.com/PASTE-YOUR-BOOKING-LINK-HERE",
+  bookingUrl: "https://calendly.com/shannon-melisocial/consultation",
   // Google Apps Script web app connected to the "MELI Intake Responses" Sheet
   endpoint: "https://script.google.com/macros/s/AKfycbxCCM6vtjyYznw7DqLI9ULXOfj1pe4XHFhjbzT_wr394I88wODnnFwaUy5qL0UztfUpaw/exec"
 };
