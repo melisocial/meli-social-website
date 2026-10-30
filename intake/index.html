@@ -191,7 +191,7 @@ h1 em, h2 em{font-style:italic; color:var(--fig);}
 document.querySelectorAll('[data-role="booking-link"]').forEach(el => el.setAttribute('href', window.MELI_INTAKE.bookingUrl));
 const from = new URLSearchParams(location.search).get('from');
 initIntake(document.getElementById('intake'), {
-  source: from === 'website' ? 'Website' : 'Instagram',
+  source: from === 'website' ? 'Website' : 'External',
   onProgress(n, total){
     document.querySelector('.pcount').textContent = n + ' of ' + total;
     document.querySelector('.fill').style.width = (n / total * 100) + '%';
