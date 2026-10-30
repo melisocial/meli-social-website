@@ -9,7 +9,7 @@
 <meta property="og:description" content="Tell me a little about your business and I'll be in touch to chat about what's possible.">
 <meta property="og:url" content="https://melisocial.com/intake/">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#f7f2ec">
+<meta name="theme-color" content="#1d1220">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:wght@400;500&display=swap" rel="stylesheet">
@@ -22,9 +22,15 @@
   --font-sans:"Jost","Futura","Century Gothic",system-ui,sans-serif;
   --s1:8px; --s2:16px; --s3:32px; --s4:64px;
   --ease:cubic-bezier(.22,.61,.36,1);
+
+  /* This page uses the dark MELI look: deep aubergine with ivory text and orchid accents */
+  --page:#1d1220; --noir:#f3ebe4; --mauve:#bfaab9; --hairline:#4a3550;
+  --fig:#d7b4dc; --fig-deep:#e6cdea; --on-fig:#2d1b33; --gilt-deep:#b4925a;
+  color-scheme:dark;
 }
+.ifm{--err:#f0a2ad;}
 *{box-sizing:border-box; margin:0; padding:0;}
-body{background:var(--ivory); color:var(--noir); font-family:var(--font-sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+body{background:var(--page); color:var(--noir); font-family:var(--font-sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
 ::selection{background:var(--fig); color:var(--on-fig);}
 a{color:inherit; text-decoration:none;}
 button{font:inherit; cursor:pointer;}
@@ -45,7 +51,7 @@ h1 em, h2 em{font-style:italic; color:var(--fig);}
 .eyebrow{display:block; font-weight:500; font-size:12px; line-height:16px; letter-spacing:.24em; text-transform:uppercase; color:var(--gilt-deep);}
 .intro{color:var(--mauve); max-width:52ch;}
 
-.progress{position:sticky; top:0; z-index:5; background:var(--ivory); margin-top:40px; padding:max(14px, env(safe-area-inset-top, 0px)) 0 14px; display:flex; align-items:center; gap:14px; font-size:12px; letter-spacing:.12em; color:var(--mauve); font-variant-numeric:tabular-nums;}
+.progress{position:sticky; top:0; z-index:5; background:var(--page); margin-top:40px; padding:max(14px, env(safe-area-inset-top, 0px)) 0 14px; display:flex; align-items:center; gap:14px; font-size:12px; letter-spacing:.12em; color:var(--mauve); font-variant-numeric:tabular-nums;}
 .track{flex:1; height:1px; background:var(--hairline); position:relative;}
 .fill{position:absolute; left:0; top:-.5px; height:2px; width:0; background:var(--fig); transition:width .5s ease;}
 .ifm{margin-top:24px;}
@@ -183,8 +189,9 @@ h1 em, h2 em{font-style:italic; color:var(--fig);}
 <script src="/intake/intake-form.js"></script>
 <script>
 document.querySelectorAll('[data-role="booking-link"]').forEach(el => el.setAttribute('href', window.MELI_INTAKE.bookingUrl));
+const from = new URLSearchParams(location.search).get('from');
 initIntake(document.getElementById('intake'), {
-  source: 'Instagram',
+  source: from === 'website' ? 'Website' : 'Instagram',
   onProgress(n, total){
     document.querySelector('.pcount').textContent = n + ' of ' + total;
     document.querySelector('.fill').style.width = (n / total * 100) + '%';

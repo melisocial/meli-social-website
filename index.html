@@ -16,7 +16,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%235c1239'/%3E%3Ctext x='50' y='71' font-family='Didot,Bodoni 72,Georgia,serif' font-size='62' fill='%23f7f2ec' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="/intake/intake-form.css">
 <style>
 /* ==========================================================================
    MELI: Social Media Studio
@@ -370,10 +369,6 @@ body.no-hero-photo .hero-photo{display:none;}
 @media (max-width:860px){ .faq-grid{grid-template-columns:1fr; gap:var(--s3);} .faq-list summary{font-size:18px;} }
 
 /* Let's talk, centred */
-.intake-grid{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:var(--s4); align-items:start;}
-.intake .section-head{margin-bottom:0; position:sticky; top:140px;}
-.intake .section-head .text{max-width:var(--measure);}
-@media (max-width:860px){ .intake-grid{grid-template-columns:1fr; gap:var(--s3);} .intake .section-head{position:static;} }
 .cta-center{display:flex; flex-direction:column; align-items:center; text-align:center;}
 .cta-center .eyebrow.ruled::after{margin-left:auto; margin-right:auto;}
 .cta-center p{margin-left:auto; margin-right:auto;}
@@ -598,116 +593,7 @@ body.no-hero-photo .hero-photo{display:none;}
     <h2 class="rv">Make your business <em>the one they choose.</em></h2>
     <p class="text rv">Book a free 15 minute call and tell me about your business. You'll speak with me directly, with no pressure and no pitch deck.</p>
     <div class="actions rv"><a href="#" class="btn btn-primary" data-role="booking-link" target="_blank" rel="noopener">Choose a Time</a></div>
-    <p class="cta-secondary rv">Not ready for a call? <a href="#intake" class="tlink">Share a few details about your business</a> and I'll reply personally.</p>
-  </div>
-</section>
-
-<section class="intake" id="intake">
-  <div class="wrap intake-grid">
-    <div class="section-head rv-group">
-      <p class="eyebrow ruled rv">Not Ready for a Call?</p>
-      <h2 class="rv">Tell me about your <em>business.</em></h2>
-      <p class="text rv">Share a few details and I'll reply personally within two business days. It takes about two minutes.</p>
-    </div>
-    <div class="ifm" id="intake-form">
-    <form novalidate>
-      <fieldset data-req="choice">
-        <legend class="q"><span class="num">01</span>What are you interested in?</legend>
-        <div class="opts">
-          <label class="opt"><input type="radio" name="interest" id="int-full" value="Full Service Social Media Management"><span>Full Service Social Media Management</span></label>
-          <label class="opt"><input type="radio" name="interest" id="int-video" value="A Video Series for my business"><span>A Video Series for my business</span></label>
-          <label class="opt"><input type="radio" name="interest" id="int-unsure" value="Not sure yet"><span>Not sure yet, I'd love your guidance</span></label>
-        </div>
-        <p class="error">Please choose one so I know where to start.</p>
-      </fieldset>
-
-      <fieldset data-req="choice">
-        <legend class="q"><span class="num">02</span>Who's handling your social media right now?</legend>
-        <div class="opts">
-          <label class="opt"><input type="radio" name="current" id="cur-me" value="Me, when I find the time"><span>Me, when I find the time</span></label>
-          <label class="opt"><input type="radio" name="current" id="cur-team" value="Someone on my team"><span>Someone on my team</span></label>
-          <label class="opt"><input type="radio" name="current" id="cur-agency" value="An agency or freelancer"><span>An agency or freelancer</span></label>
-          <label class="opt"><input type="radio" name="current" id="cur-none" value="No one at the moment"><span>No one at the moment</span></label>
-        </div>
-        <p class="error">Please choose one.</p>
-      </fieldset>
-
-      <fieldset data-req="choice">
-        <legend class="q"><span class="num">03</span>What would you most love social media to do for your business?</legend>
-        <p class="hint">Choose up to two.</p>
-        <div class="opts">
-          <label class="opt check"><input type="checkbox" name="goals" id="g-time" value="Take social media off my plate"><span>Take social media off my plate</span></label>
-          <label class="opt check"><input type="checkbox" name="goals" id="g-reach" value="Reach new people"><span>Reach new people</span></label>
-          <label class="opt check"><input type="checkbox" name="goals" id="g-convert" value="Turn followers into customers"><span>Turn followers into customers</span></label>
-          <label class="opt check"><input type="checkbox" name="goals" id="g-loyal" value="Build a loyal community"><span>Build a loyal community</span></label>
-          <label class="opt check"><input type="checkbox" name="goals" id="g-brand" value="Elevate how my brand looks and feels online"><span>Elevate how my brand looks and feels online</span></label>
-        </div>
-        <p class="error">Please choose at least one.</p>
-      </fieldset>
-
-      <fieldset data-req="choice">
-        <legend class="q"><span class="num">04</span>When are you hoping to get started?</legend>
-        <div class="opts">
-          <label class="opt"><input type="radio" name="timeline" id="t-asap" value="As soon as possible"><span>As soon as possible</span></label>
-          <label class="opt"><input type="radio" name="timeline" id="t-month" value="Within the next month"><span>Within the next month</span></label>
-          <label class="opt"><input type="radio" name="timeline" id="t-quarter" value="In 1 to 3 months"><span>In 1 to 3 months</span></label>
-          <label class="opt"><input type="radio" name="timeline" id="t-explore" value="Just exploring for now"><span>Just exploring for now</span></label>
-        </div>
-        <p class="error">Please choose one.</p>
-      </fieldset>
-
-      <fieldset data-req="text">
-        <label class="q" for="story"><span class="num">05</span>What's going on in your business right now, and what would you love to see change?</label>
-        <textarea id="story" name="story" placeholder="A launch coming up, what's working, what's frustrating you, anything you'd like me to know."></textarea>
-        <p class="error">A sentence or two is plenty.</p>
-      </fieldset>
-
-      <fieldset data-req="choice">
-        <legend class="q"><span class="num">06</span>What investment feels right for this stage of your business?</legend>
-        <p class="hint">Every package is tailored to your goals and budget. Knowing your range helps me shape what I can offer you at that level.</p>
-        <div class="opts">
-          <label class="opt"><input type="radio" name="budget" id="b-high" value="2,000+/month"><span>2,000+/month</span></label>
-          <label class="opt"><input type="radio" name="budget" id="b-mid" value="1,000 to 2,000/month"><span>1,000 to 2,000/month</span></label>
-          <label class="opt"><input type="radio" name="budget" id="b-low" value="Under 1,000/month"><span>Under 1,000/month</span></label>
-          <label class="opt"><input type="radio" name="budget" id="b-talk" value="I'd rather talk it through"><span>I'd rather talk it through</span></label>
-        </div>
-        <p class="error">Please choose one, or let me know you'd rather talk it through.</p>
-      </fieldset>
-
-      <fieldset data-req="details">
-        <legend class="q"><span class="num">07</span>Your details</legend>
-        <div class="details">
-          <div class="field"><label for="in-name">Your name</label><input type="text" id="in-name" name="name" autocomplete="name"></div>
-          <div class="field"><label for="in-biz">Business name</label><input type="text" id="in-biz" name="business" autocomplete="organization"></div>
-          <div class="field full"><label for="in-email">Email</label><input type="email" id="in-email" name="email" autocomplete="email" inputmode="email"></div>
-          <div class="field"><label for="in-handle">Instagram handle or website</label><input type="text" id="in-handle" name="handle" placeholder="@yourbusiness" autocapitalize="off"></div>
-          <div class="field"><label for="in-city">City</label><input type="text" id="in-city" name="city" autocomplete="address-level2"></div>
-        </div>
-        <p class="error">Please fill in each field so I can reach you.</p>
-      </fieldset>
-
-      <fieldset data-req="optional">
-        <label class="q" for="extra"><span class="num">08</span>Anything else you'd like me to know? <span class="optional">(optional)</span></label>
-        <textarea class="short" id="extra" name="extra"></textarea>
-      </fieldset>
-
-      <div class="hp" aria-hidden="true"><label for="company_site">Leave this empty</label><input type="text" id="company_site" name="company_site" tabindex="-1" autocomplete="off"></div>
-
-      <div class="submit">
-        <button type="submit" class="btn btn-primary">Send to Shannon</button>
-        <p class="note-small">I'll be in touch within two business days.</p>
-        <p class="send-error" hidden>That didn't go through. Please check your connection and try again.</p>
-      </div>
-    </form>
-
-    <div class="thanks" hidden>
-      <p class="eyebrow">Received</p>
-      <h2>Thank you, <em class="tname">friend</em></h2>
-      <p>I'll be in touch within two business days. If you're ready to talk sooner, you can book a free 15 minute call with me.</p>
-      <a href="#" class="btn btn-primary" data-role="booking-link" target="_blank" rel="noopener">Book a free call</a>
-    </div>
-
-    </div>
+    <p class="cta-secondary rv">Not ready for a call? <a href="/intake/?from=website" class="tlink">Share a few details about your business</a> and I'll reply personally.</p>
   </div>
 </section>
 
@@ -725,8 +611,6 @@ body.no-hero-photo .hero-photo{display:none;}
 </footer>
 
 
-<script src="/intake/intake-form.js"></script>
-<script>initIntake(document.getElementById('intake-form'), { source: 'Website' });</script>
 <script>
 /* ==========================================================================
    MELI: main.js
